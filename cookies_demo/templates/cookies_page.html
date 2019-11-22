@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOUGHNUTS!</title>
+</head>
+<body>
+{% if request.COOKIES.donat %}
+    <h1>Donat: {{ request.COOKIES.donat }}</h1>
+{% else %}
+    <h1>NO DOUGHNUTS :(</h1>
+{% endif %}
+</body>
+</html>

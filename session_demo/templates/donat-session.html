@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Session Donat</title>
+</head>
+<body>
+    <h1>Ada Donat: {{ request.session.ada_donat }}</h1>
+    {% if request.session.donat %}
+        <h1>Donat: {{ request.session.donat }}</h1>
+        <button>
+            <a href="{% url 'delete-donat' %}">Hapus Donat</a>
+        </button>
+    {% else %}
+        <h1>No Donat Yet</h1>
+    {% endif %}
+    <button>
+        <a href="{% url 'tambah-donat' %}">Tambah Donat</a>
+    </button>
+    <button>
+        <a href="{% url 'delete-all-sessions' %}">Hapus Semua Session</a>
+    </button>
+</body>
+</html>
